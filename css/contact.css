@@ -1,0 +1,242 @@
+@font-face {
+font-family: ss3r;
+src: url(../fonts/static/SourceSans3-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    font-family: "GFS Neohellenic", sans-serif;
+    font-size: 18px;
+    --firstColor: #C3D8CC;
+    --secondColor: white;
+    --thirdColor: black;
+    --fourthColor: rgb(82, 74, 74);
+    --maxSiteWidth: 1100px;
+    --mainFontFamily: "GFS Neohellenic", sans-serif;
+    --headingsFont: ss3r, sans-serif;
+}
+h1, h2, h3 h4, h5, h6 {
+    color: var(--fourthColor);
+    font-family: var(--headingsFont);
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+div#wrapper {
+    width: 100%;
+    max-width: var(--maxSiteWidth);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    height: 90px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: var(--thirdColor);
+}
+header div#logo {
+    height: 100%;
+}
+header div#logo img {
+    height: 100%;
+}
+header nav a {
+    color: var(--thirdColor);
+    padding: 7px 14px;
+}
+header nav a:hover, .active {
+    text-decoration: underline;
+    color: var(--secondColor);
+}
+header nav a#contact {
+    cursor: pointer;
+}
+div.shade {
+    position: fixed;
+    background-color: rgba(197, 173, 219, 0.6);
+    
+    margin: auto;
+    max-width: var(--maxSiteWidth);
+}
+main {
+    background-color: var(--secondColor);
+    flex-grow: 1;
+}
+main {
+    width: 50%;
+}
+main div {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+main div.head {
+   background-color: #b1d3c0;
+    width: 550px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+main div#head p {
+    font-size: larger;
+}
+main div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+main div.name {
+    display: flex;
+    flex-direction: column;
+}
+main p {
+    font-size: smaller;
+    margin-bottom: 6px;
+}
+main div:nth-child(6) form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main div:nth-child(6) input {
+    width: 25%;
+}
+main div:nth-child(6) input:nth-child(2) {
+    width: 20%;
+}
+main input {
+    border: thin solid #b1d3c0;
+    border-radius: 5px;
+    width: 100%;
+    padding: 6px;
+}
+input[type='number']::-webkit-inner-spin-button {
+    opacity: 1;
+}
+input[type='number']::-webkit-outer-spin-button {
+    opacity: 1;
+}
+form img {
+    width: 26px;
+    height: 26px;
+}
+footer {
+    font-family: ss3r;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--firstColor);
+    color: var(--fourthColor);
+}
+footer div {
+    width: 32%;
+}
+footer div:nth-child(1) {
+    width: 30%;
+}
+footer div:nth-child(2) {
+    width: 25%;
+}
+footer div:nth-child(3) {
+    width: 35%;
+}
+ul {
+    list-style-type: none;
+}
+footer div h3 {
+    margin-bottom: 10px;
+}
+footer div p {
+    line-height: 150%;
+    text-align: left;
+}
+footer li {
+    padding-bottom: 6px;
+}
+footer li a {
+    color: var(--fourthColor);
+    transition: all 0.5s;
+}
+footer li a:hover {
+    text-decoration: underline;
+    color: var(--secondColor);
+    margin-left: 10px;
+}
+footer div form {
+    position: relative;
+}
+footer input[type='email'] {
+    border: solid thin black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 6px;
+    width: 100%;
+}
+footer input[type='submit'] {
+    height: 30px;
+    width: 60px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+@media screen and (max-width: 800px) {
+    main {
+        background-color: beige;
+    }
+    header nav {
+        display: none;
+    }                                                                                
+}
+@media screen and (max-width: 720px)  {
+    footer {
+        flex-direction: column;
+    }
+    footer div:nth-child(1) {
+    width: 100%;
+    }
+    footer div:nth-child(2) {
+    width: 100%;
+    }
+    footer div:nth-child(3) {
+    width: 100%;
+    }
+    footer div {
+        margin-bottom: 1rem;
+    }        
+}
+    svg#insta {
+    fill: green;
+    transition: all 1s;
+}
+svg#insta:hover {
+    fill: red;
+    background-color: pink;
+    transform: scale(1.2);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+                            'FILL' 0,
+                            'wght' 400,
+                            'GRAD' 0,
+                            'opsz' 24
+}

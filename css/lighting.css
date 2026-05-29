@@ -1,0 +1,128 @@
+.material-symbols-sharp, .star {
+    color: #ee9b4d;
+}
+section.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+section.row div.card {
+    border: solid thin rgb(82, 74, 74);
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 4px;
+    width: 30%;
+}
+section.row div.card:hover {
+    border-color: #ee9b4d;
+    transition: all 0.5s;
+}
+section.row div.card div.product {
+    width: 100%;
+    position: relative;
+}
+section.row div.card div.product img {
+    width: 100%;
+    display: block;
+}
+section.row div.card div.product ul.product-icon {
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    top: 86%;
+    width: 100%;
+}
+section.row div.card div.product ul.product-icon li {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+section.row div.card:hover div.product ul.product-icon li {
+    opacity: 1;
+    transform: translateY(0);
+}
+section.row div.card:hover div.product ul.product-icon li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+section.row div.card:hover div.product ul.product-icon li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+section.row div.card:hover div.product ul.product-icon li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+section.row div.card div.product .product-icon li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px; 
+    height: 40px; 
+    background: #ffffff; 
+    margin-right: 5px; 
+    transition: all 0.35s ease 0s; 
+    border-radius: 3px;
+}
+section.row div.card div.product .product-icon li a:hover {
+    background-color: #ee9b4d;
+    transition: all 0.5s;
+}
+section.row div.card div.product .product-icon li a:hover .material-symbols-sharp {
+    color: #ffffff;
+    transition: all 0.5s;
+}
+section.row div.card div.data {
+    text-align: center;
+}
+section.row div.card div.data p {
+    margin: 2px 2px;
+    color: rgb(82, 74, 74);
+}
+section.row div.card div.data p.product-name {
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+}
+section.row div.card div.data p.product-name:hover {
+    color: #ee9b4d;
+    transition: all 0.5s;
+}
+section.row div.card div.data div.rating {
+    padding-top: 14px;
+    padding-bottom: 2px;
+}
+section.row div.card div.data ul.list-inline {
+    list-style: none;
+}
+section.row div.card div.data ul.list-inline li {
+    margin-right: 2px;
+    display: inline-block;
+}
+section.row div.card div.data p.price span:nth-child(1) {
+    text-decoration: line-through;
+}
+section.row div.card div.data p.price span:nth-child(2) {
+    font-weight: bold;
+    font-size: 24px;
+    color: #ee9b4d;
+    margin-left: 10px;
+}
+@media screen and (max-width: 800px) {
+    section.row {
+        flex-wrap: wrap;
+}
+    section.row div.card {
+    width: 47%;
+}                                                                           
+}
+@media screen and (max-width: 600px) {
+    section.row {
+        flex-wrap: wrap;
+}
+    section.row div.card {
+    width: 100%;
+}                                                                                
+}

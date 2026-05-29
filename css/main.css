@@ -1,0 +1,422 @@
+        @font-face {
+            font-family: ss3r;
+            src: url(../fonts/static/SourceSans3-Regular.ttf);
+        }
+* {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    font-family: "GFS Neohellenic", sans-serif;
+    font-size: 18px;
+    --firstColor: #C3D8CC;
+    --secondColor: white;
+    --thirdColor: black;
+    --fourthColor: rgb(82, 74, 74);
+    --mainFontFamily: "GFS Neohellenic", sans-serif;
+    --headingsFont: ss3r, sans-serif;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+h1, h2, h3 h4, h5, h6 {
+    color: var(--fourthColor);
+    font-family: var(--headingsFont);
+}
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+header {
+    height: 90px;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: var(--thirdColor);
+}
+header div#logo {
+    height: 100%;
+}
+header div#logo img {
+    height: 100%;
+}
+header nav a {
+    color: var(--thirdColor);
+    padding: 7px 14px;
+}
+header nav a:hover, .active {
+    text-decoration: underline;
+    color: var(--secondColor);
+}
+header nav a#contact {
+    cursor: pointer;
+}
+main {
+    background-color: var(--secondColor);
+    flex-grow: 1;
+}
+main.shade {
+    width: 50%;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    background-color: rgba(221, 203, 203, 0.9);
+}
+main.shade div {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+main.shade div.head {
+   background-color: #b1d3c0;
+    width: 550px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+main.shade div.head p {
+    font-size: larger;
+}
+main.shade div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+}
+main.shade div.name {
+    display: flex;
+    flex-direction: column;
+}
+main.shade p {
+    font-size: smaller;
+    margin-bottom: 6px;
+    text-align: left;
+}
+main.shade div:nth-child(6) form {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+main.shade div:nth-child(6) input {
+    width: 25%;
+}
+main.shade div:nth-child(6) input:nth-child(2) {
+    width: 20%;
+}
+main.shade input {
+    border: thin solid #b1d3c0;
+    border-radius: 5px;
+    width: 100%;
+    padding: 6px;
+}
+main.shade input[type='number']::-webkit-inner-spin-button {
+    opacity: 1;
+}
+main.shade input[type='number']::-webkit-outer-spin-button {
+    opacity: 1;
+}
+main.shade form img {
+    width: 26px;
+    height: 26px;
+}
+main.shade div.btn {
+    background-color: #b1d3c0;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    padding: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+main#home h3 {
+    font-weight: 500;
+    text-align: center;
+    padding: 30px;
+    padding-top: 60px;
+}
+main#home div.rowFirst p {
+    text-decoration: underline;
+    margin-bottom: 20px;
+    text-align: left;
+}
+main#home div.rowFirst a {
+    color: var(--fourthColor);
+    padding: 0;
+    margin-right: 30px;
+}
+main#home div.rowFirst {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+}
+main#home div.rowSecond {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+main#home div a {
+    padding: 10px;
+}
+main#home div.rowFirst img {
+    margin-bottom: 10px;
+}
+main#home img {
+    width: 200px;
+}
+main#home div.column {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+main#home div.column img {
+    width: 100%;
+}
+main#home div.column a {
+    padding: 0;
+    margin-top: 40px;
+}
+main#home div.column h3 {
+    text-align: left;
+    padding-left: 0;
+}
+main#home div.column p {
+    text-decoration: none;
+    text-align: left;
+}
+main#home a.button {
+    width: 250px;
+    height: 50px;
+    border: solid thin var(--fourthColor);
+    transition: all 0.5s;
+    color: var(--fourthColor);
+}
+main#home a.button:hover {
+    background-color: var(--fourthColor);
+}
+main#home a.button:hover h5 {
+    color: var(--secondColor);
+}
+main#home div.column h5 {
+    font-weight: 500;
+    text-align: center;
+    padding-top: 16px;
+    color: var(--fourthColor);
+    transition: all 0.5s;
+}
+main#home div#card {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main#home div#card img {
+    width: 500px;
+}
+main#home div#card a {
+    padding: 0;
+}
+main#home div#cardRight {
+    width: 450px;
+}
+main#home div#cardRight h3 {
+    text-align: left;
+    padding: 0;
+    margin-bottom: 20px;
+}
+main#home div#cardRight p {
+    margin-bottom: 20px;
+    text-align: left;
+}
+main#home div#cardRight a {
+    text-decoration: underline;
+    color: var(--fourthColor);
+}
+main#home div.rowThird div {
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    margin-bottom: 20px;
+    transition: all 0.5s;      
+}
+main#home div.rowThird a div#p1 {
+    background-image: url("../images/roasted1.jpg");   
+}
+main#home div.rowThird a div#p2 {
+    background-image: url("../images/onion1.jpg");
+}
+main#home div.rowThird a div#p3 {
+    background-image: url("../images/cake1.jpg");
+}
+main#home div.rowThird a div#p4 {
+    background-image: url("../images/goulash1.jpg");
+}            
+main#home div.rowThird img {
+    width: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+main#home div.rowThird div#p1:hover {
+    background-image: url("../images/roasted2.jpg");
+}
+main#home div.rowThird div#p2:hover {
+    background-image: url("../images/onion2.jpg");
+}
+main#home div.rowThird div#p3:hover {
+    background-image: url("../images/cake2.jpg");
+}
+main#home div.rowThird div#p4:hover {
+    background-image: url("../images/goulash2.jpg");
+}
+main#home div.rowThird h4, p {
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+main#home div.rowThird {
+    display: flex;
+    overflow: auto;
+    margin-bottom: 40px;
+}
+main#home div.rowThird a {
+    padding: 0;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: var(--fourthColor);
+}
+main#home div.column2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+main#home div.column2 h5 {
+    text-align: center;
+    margin-top: 7px;
+}
+footer {
+    font-family: ss3r;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--firstColor);
+    color: var(--fourthColor);
+}
+footer p {
+    margin-bottom: 0;
+}
+footer div {
+    width: 32%;
+}
+footer div:nth-child(1) {
+    width: 30%;
+}
+footer div:nth-child(2) {
+    width: 25%;
+}
+footer div:nth-child(3) {
+    width: 35%;
+}
+footer ul {
+    list-style-type: none;
+}
+footer div h3 {
+    margin-bottom: 10px;
+}
+footer div p {
+    line-height: 150%;
+    text-align: left;
+}
+footer li {
+    padding-bottom: 6px;
+}
+footer li a {
+    color: var(--fourthColor);
+    transition: all 0.5s;
+}
+footer li a:hover {
+    text-decoration: underline;
+    color: var(--secondColor);
+    margin-left: 10px;
+}
+footer div form {
+    position: relative;
+}
+footer input[type='email'] {
+    border: solid thin black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 6px;
+    width: 100%;
+}
+footer input[type='submit'] {
+    height: 30px;
+    width: 60px;
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+@media screen and (max-width: 800px) {
+    main {
+        background-color: beige;
+    }
+    header nav {
+        display: none;
+    }                                                                                
+}
+@media screen and (max-width: 720px)  {
+    footer {
+        flex-direction: column;
+    }
+    footer div:nth-child(1) {
+    width: 100%;
+    }
+    footer div:nth-child(2) {
+    width: 100%;
+    }
+    footer div:nth-child(3) {
+    width: 100%;
+    }
+    footer div {
+        margin-bottom: 1rem;
+    }        
+}
+    svg#insta {
+    fill: green;
+    transition: all 1s;
+}
+svg#insta:hover {
+    fill: red;
+    background-color: pink;
+    transform: scale(1.2);
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+                            'FILL' 0,
+                            'wght' 400,
+                            'GRAD' 0,
+                            'opsz' 24
+}

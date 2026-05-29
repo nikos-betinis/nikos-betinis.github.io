@@ -1,0 +1,121 @@
+window.addEventListener("load", function() {
+    let contact = this.document.querySelector("nav > a#contact");
+    contact.addEventListener("click", function(e) {
+        e.preventDefault();
+        let existingForm = document.querySelector("#contactForm");
+        if (existingForm) {
+            existingForm.remove();
+        } else {
+            createForm();
+        }
+    });
+});
+function createForm() {
+    let shade = document.createElement("main");
+    shade.setAttribute("id", "contactForm");
+    shade.classList.add("shade");
+    let head = document.createElement("div");
+    head.classList.add("head");
+    shade.appendChild(head);
+    let p = document.createElement("p");
+    p.textContent = "Online Registration";
+    head.appendChild(p);
+    let divName = document.createElement("div");
+    shade.appendChild(divName);
+    let divfName = document.createElement("div");
+    divfName.classList.add("name");
+    divName.appendChild(divfName);
+    let pfl = document.createElement("p");
+    pfl.textContent = "First Name:";
+    divfName.appendChild(pfl);
+    let formfname = document.createElement("form");
+    divfName.appendChild(formfname);
+    let inputfname = document.createElement("input");
+    inputfname.setAttribute("type", "text");
+    inputfname.setAttribute("placeholder", "First Name");
+    formfname.appendChild(inputfname);
+    let divlName = document.createElement("div");
+    divlName.classList.add("name");
+    divName.appendChild(divlName);
+    let psl = document.createElement("p");
+    psl.textContent = "Last Name:";
+    divlName.appendChild(psl);
+    let formlname = document.createElement("form");
+    divlName.appendChild(formlname);
+    let inputlname = document.createElement("input");
+    inputlname.setAttribute("type", "text");
+    inputlname.setAttribute("placeholder", "Last Name");
+    formlname.appendChild(inputlname);
+    let divEmail = document.createElement("div");
+    shade.appendChild(divEmail);
+    let pemail = document.createElement("p");
+    pemail.textContent = "Email Address:";
+    divEmail.appendChild(pemail);
+    let formEmail = document.createElement("form");
+    divEmail.appendChild(formEmail);
+    let inputemail = document.createElement("input");
+    inputemail.setAttribute("type", "email");
+    inputemail.setAttribute("placeholder", "Email Address");
+    formEmail.appendChild(inputemail);
+    let divCompany = document.createElement("div");
+    shade.appendChild(divCompany);
+    let pCompany = document.createElement("p");
+    pCompany.textContent = "Company (if applicapable):";
+    divCompany.appendChild(pCompany);
+    let formCompany = document.createElement("form");
+    divCompany.appendChild(formCompany);
+    let inputCompany = document.createElement("input");
+    inputCompany.setAttribute("type", "text");
+    inputCompany.setAttribute("placeholder", "Company");
+    formCompany.appendChild(inputCompany);
+    let divAddress = document.createElement("div");
+    shade.appendChild(divAddress);
+    let pAddress = document.createElement("p");
+    pAddress.textContent = "Physical Address:";
+    divAddress.appendChild(pAddress);
+    let formAddress = document.createElement("form");
+    divAddress.appendChild(formAddress);
+    let inputAddress = document.createElement("input");
+    inputAddress.setAttribute("type", "text");
+    inputAddress.setAttribute("placeholder", "Physical Address");
+    formAddress.appendChild(inputAddress);
+    let divBirth = document.createElement("div");
+    shade.appendChild(divBirth);
+    let pBirth = document.createElement("p");
+    pBirth.textContent = "Date of Birth:";
+    divBirth.appendChild(pBirth);
+    let formBirth = document.createElement("form");
+    divBirth.appendChild(formBirth);
+    let inputDay = document.createElement("input");
+    inputDay.setAttribute("type", "number");
+    inputDay.setAttribute("placeholder", "Day");
+    inputDay.setAttribute("min", "1");
+    inputDay.setAttribute("max", "31");
+    formBirth.appendChild(inputDay);
+    let inputMonth = document.createElement("input");
+    inputMonth.setAttribute("type", "number");
+    inputMonth.setAttribute("placeholder", "Month");
+    inputMonth.setAttribute("min", "1");
+    inputMonth.setAttribute("max", "12");
+    formBirth.appendChild(inputMonth);
+    let inputYear = document.createElement("input");
+    inputYear.setAttribute("type", "number");
+    inputYear.setAttribute("placeholder", "Year");
+    inputYear.setAttribute("min", "1900");
+    inputYear.setAttribute("max", "2026");
+    formBirth.appendChild(inputYear);
+    let calendar = document.createElement("img");
+    calendar.setAttribute("src", "images/calendar.png");
+    formBirth.appendChild(calendar);
+    let btn = document.createElement("div");
+    btn.textContent = "Register";
+    btn.classList.add("btn");
+    shade.appendChild(btn);
+    document.body.appendChild(shade);
+    shade.addEventListener("click", function (e) {
+        if (e.target === btn) {
+            document.body.removeChild(shade);
+        }
+    });
+
+}
